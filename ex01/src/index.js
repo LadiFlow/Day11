@@ -3,11 +3,10 @@ var myArr = [2, 4, 0, 8, 10];
 // End of creating a array
 
 function myArrayFunction(arr) {
-   myArr[2] = 6;
    var myItems = [...arr];
-   var myItems = myArr;
     // Only change code below this line
-
+    var myItems = myArr;
+    myArr[2] = 6;
     return myItems;
     // Only change code above this line
 }
