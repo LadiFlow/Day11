@@ -1,28 +1,20 @@
-// Create a temps array here
-var temps = [
-    [31, 32, 19, 37],
-    [29, 27, 55, 36],
-    [17, 27, 42, 46],
-    [29, 52, 21, 64],
-    [91, 27, 31, 61]
-];
-// End of temps array
+// Create a myPetsArray here
+var myPetsArray = ["Dog", "Cat"]
+// End of myPetsArray
 
-function myArrayFunction(arr) {
-    var newTemps = [...arr];
-var averageDayTemp = [];
-    // Only change code below this line
-    for(var i = 0; i < temps.length; i++) {
-        var sum = 0;
-         for(var j = 0; j < temps[i].length; j++) {
-            sum = sum + temps[i][j];
-           newTemps = sum/temps[i].length;
-         }
-         averageDayTemp.push(newTemps);
-    }
-    // Only change code above this line
-    return averageDayTemp;
+function myArrayFunction(myPets) {
+    var myNewPets = [...myPets];
+
+// Only change code below this line
+myNewPets = ["Bird", "Fish"];
+var firstPet = myNewPets.shift();
+var lastPet = myPetsArray.pop();
+myNewPets.shift();
+myNewPets = [lastPet, firstPet];
+myNewPets.unshift('Lion');
+return myNewPets;
+// Only change code above this line
 }
 
-console.log(myArrayFunction("averageDayTemp")); // Change this line
+console.log(myArrayFunction(myPetsArray)); // Change this line
 module.exports = myArrayFunction;
